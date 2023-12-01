@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "bun app.ts",
     "build": "bun build --entrypoints ./app.ts --outdir ./ --target bun",
-    "start": "bun ./out/app.js"
+    "start": "bun app.js"
   },
   "devDependencies": {
     "@types/node-cron": "^3.0.11",
