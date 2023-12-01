@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun app.ts",
+    "build": "bun build --entrypoints ./app.ts --outdir ./ --target bun",
     "start": "bun ./out/app.js"
   },
   "devDependencies": {
