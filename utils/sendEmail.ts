@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-export default function sendEmail(text : string) {
+export default function sendEmail(subject : string,text : string) {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -12,7 +12,7 @@ export default function sendEmail(text : string) {
       const mailOptions = {
         from: Bun.env.EMAIL,
         to: Bun.env.RECEIVER,
-        subject: 'IP Has Changed',
+        subject: subject,
         text
       };
       
