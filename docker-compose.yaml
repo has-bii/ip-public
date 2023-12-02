@@ -1,0 +1,13 @@
+version: '3'
+services:
+  get-ip:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: hasbii/get-ip
+    restart: always
+    env_file: .env
+    environment:
+      EMAIL: ${EMAIL}
+      PASSWORD: ${PASSWORD}
+      RECEIVER: ${RECEIVER}
