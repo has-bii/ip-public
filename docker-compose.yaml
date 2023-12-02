@@ -1,6 +1,7 @@
 version: '3'
 services:
   get-ip:
+    container_name: GetIP
     build: 
       context: .
       dockerfile: Dockerfile
