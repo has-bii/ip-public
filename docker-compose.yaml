@@ -1,14 +1,17 @@
-version: '3'
+version: "3"
 services:
   get-ip:
     container_name: GetIP
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
     image: hasbii/get-ip
     restart: always
     env_file: .env
     environment:
-      EMAIL: ${EMAIL}
-      PASSWORD: ${PASSWORD}
-      RECEIVER: ${RECEIVER}
+      ZONE_ID: ${ZONE_ID}
+      CLOUDFLARE_TOKEN: ${CLOUDFLARE_TOKEN}
+      RECORD_ID: ${RECORD_ID}
+      # EMAIL: ${EMAIL}
+      # PASSWORD: ${PASSWORD}
+      # RECEIVER: ${RECEIVER}
